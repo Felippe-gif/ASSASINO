@@ -1,0 +1,23 @@
+print("\n\t\t ---- JOGO DO ASSASINO --- \n")
+    
+perguntas = [
+    "Telefonou para a vítima? [S/N]: ",
+    "Esteve no local do crime? [S/N]: ",
+    "Mora perto da vítima? [S/N]: ",
+    "Devia para a vítima? [S/N]: ",
+    "Já trabalhou com a vítima? [S/N]: "
+]
+
+respostasL = 0
+for i in perguntas:
+    resposta =input(i).strip().upper()
+    if resposta == 'S':
+        respostasL += 1
+if respostasL <= 2:
+    print('suspeita')
+elif 3 <= respostasL <= 4:
+    print('cumplice')
+elif  respostasL == 5:
+    print('assasino ')
+else:
+      print('inocente ')
